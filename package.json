@@ -1,0 +1,23 @@
+{
+  "name": "frontmvprofessor",
+  "version": "1.0.0",
+  "description": "MVP de teste para o sistema de gestão de alunos.",
+  "homepage": "https://github.com/ManelFer/frontMVProfessor#readme",
+  "bugs": {
+    "url": "https://github.com/ManelFer/frontMVProfessor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManelFer/frontMVProfessor.git"
+  },
+  "license": "ISC",
+  "author": "begin",
+  "type": "commonjs",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
