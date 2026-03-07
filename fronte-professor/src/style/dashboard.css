@@ -1,0 +1,73 @@
+/* Layout Geral */
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.main {
+  flex: 1;
+  /* Cor de fundo solicitada */
+  background-color: #FDFBF7; 
+}
+
+.content {
+  padding: 40px;
+}
+
+/* Grid de Cards */
+.cards {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Estilização do Card */
+.card {
+  background: #ffffff;
+  padding: 24px;
+  margin: 8px;
+  border-radius: 16px;
+  
+  /* Borda suave em tom pastel para definir o card sem pesar */
+  border: 1px solid #F1EFE9;
+  
+  /* Sombra mais difusa e leve */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Tipografia */
+.card h3 {
+  /* Um cinza quente que combina com o fundo bege */
+  color: #8E8A82;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  /* Azul ou Verde pastel para o destaque numérico */
+  color: #A7C7E7; 
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+}

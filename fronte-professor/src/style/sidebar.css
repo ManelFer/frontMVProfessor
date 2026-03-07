@@ -1,0 +1,61 @@
+.sidebar {
+  width: 260px;
+  /* Um tom de cinza "warm" profundo para conversar com o fundo bege */
+  background: #F3EFEA; 
+  color: #2D2C2A;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.03);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 48px;
+  padding-left: 12px;
+  color: #2D2C2A;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Espaçamento menor para links com fundo */
+}
+
+a {
+  color: #A09E9B;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Efeito de Hover Suave */
+a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #2D2C2A;
+}
+
+/* Estilo do Link Ativo */
+a.router-link-active {
+  background: #A7C7E7; /* O mesmo azul pastel usado nos números dos cards */
+  color: #2D2C2A;    /* Texto escuro para contraste no fundo claro */
+  font-weight: 600;
+}
+
+/* Opcional: Adicionar um pequeno ponto indicador no ativo */
+a.router-link-active::before {
+  content: '';
+  width: 4px;
+  height: 18px;
+  background: #2D2C2A;
+  position: absolute;
+  left: 0;
+  border-radius: 0 4px 4px 0;
+  display: none; /* Ativar se preferir barra lateral em vez de fundo cheio */
+}

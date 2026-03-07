@@ -1,0 +1,58 @@
+.navbar{
+  height: 70px;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  margin: 15px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* TEXTO DE BOAS VINDAS */
+
+.welcome h2{
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+/* AREA DIREITA */
+
+.navbar-right{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* NOTIFICAÇÃO */
+
+.notification{
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.notification:hover{
+  transform: scale(1.1);
+}
+
+/* USUÁRIO */
+
+.user{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+
+.user img{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #f0f0f0;
+}
