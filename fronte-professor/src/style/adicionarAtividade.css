@@ -1,0 +1,5 @@
+.layout {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}

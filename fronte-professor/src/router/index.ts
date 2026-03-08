@@ -4,6 +4,7 @@ import Login from "../pages/Login.vue"
 import Register from "../pages/Register.vue"
 import DashBoard from "../pages/DashBoard.vue"
 import AdicionarAlunos from "../pages/AdicionarAlunos.vue"
+import AdicionarAtividade from "../pages/AdicionarAtividade.vue"
 
 
 const routes = [
@@ -26,6 +27,10 @@ const routes = [
     {
         path: '/adicionarAlunos',
         component: AdicionarAlunos 
+    },
+    {
+        path: '/adicionarAtividades',
+        component: AdicionarAtividade
     }
 ]
 

@@ -25,7 +25,7 @@ import { CardSim, Cloud, LayoutDashboard, User } from "lucide-vue-next"
         Feedbacks
       </router-link>
 
-      <router-link to="/atividades" class="menu-item">
+      <router-link to="/adicionarAtividades" class="menu-item">
         <card-sim class="icon"/>
         Atividades
       </router-link>
