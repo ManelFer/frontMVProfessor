@@ -1,0 +1,80 @@
+.welcome-banner {
+    background: #ffff;
+    border-radius: 18px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #111827;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+/* TEXTO */
+
+.banner-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* BOTÕES */
+
+.banner-actions {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-primary {
+    background: transparent;
+    border: 2px solid #ff4d00;
+    color: #ff4d00;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: #ff4d00;
+    color: #ffff;
+    scale: 1;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: white;
+    border: none;
+    color: #ff4d00;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ICONE */
+
+.banner-icon {
+    font-size: 60px;
+    opacity: 0.15;
+}
+.icon {
+    width: 100px;
+    height: 100px;
+    color: #ff4d00;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:800px) {
+    .welcome-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}

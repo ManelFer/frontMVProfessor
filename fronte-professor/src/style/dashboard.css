@@ -1,4 +1,7 @@
-/* Layout Geral */
+/* ============================= */
+/* LAYOUT GERAL */
+/* ============================= */
+
 .layout {
   display: flex;
   height: 100vh;
@@ -7,67 +10,122 @@
 
 .main {
   flex: 1;
-  /* Cor de fundo solicitada */
-  background-color: #FDFBF7; 
+  background-color: #F8F6F6;
 }
 
 .content {
   padding: 40px;
 }
 
-/* Grid de Cards */
+
+/* ============================= */
+/* GRID DE CARDS */
+/* ============================= */
+
 .cards {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
-/* Estilização do Card */
+
+/* ============================= */
+/* CARD BASE */
+/* ============================= */
+
 .card {
   background: #ffffff;
+  border-radius: 18px;
   padding: 24px;
-  margin: 8px;
-  border-radius: 16px;
-  
-  /* Borda suave em tom pastel para definir o card sem pesar */
-  border: 1px solid #F1EFE9;
-  
-  /* Sombra mais difusa e leve */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s ease;
+  border: 1px solid #ececec;
+
+  box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.card:hover {
+.card:hover{
   transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
 }
 
-/* Tipografia */
-.card h3 {
-  /* Um cinza quente que combina com o fundo bege */
-  color: #8E8A82;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 8px;
+
+/* ============================= */
+/* CARD HOJE */
+/* ============================= */
+
+.today-card{
+  background: #f3f3f3;
 }
 
-.card p {
-  /* Azul ou Verde pastel para o destaque numérico */
-  color: #A7C7E7; 
-  font-size: 32px;
+
+/* ============================= */
+/* HEADER DO CARD */
+/* ============================= */
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label{
+  color: #7b8794;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* ============================= */
+/* TEXTO PRINCIPAL */
+/* ============================= */
+
+.date,
+.card-value{
+  font-size: 36px;
   font-weight: 700;
-  margin: 0;
+  color: #111827;
+  margin-top: 8px;
 }
 
-/* Responsividade */
-@media (max-width: 900px) {
-  .cards {
+
+/* ============================= */
+/* TEXTO SECUNDÁRIO */
+/* ============================= */
+
+.pending,
+.card-info{
+  margin-top: 6px;
+  color: #2fb979;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+/* ============================= */
+/* ICONES */
+/* ============================= */
+
+.icon{
+  width: 22px;
+  height: 22px;
+  color: #ff5a1f;
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 900px){
+
+  .cards{
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 16px;
   }
-  
-  .content {
+
+  .content{
     padding: 20px;
   }
+
 }

@@ -1,3 +1,6 @@
+<script setup lang="ts">
+import { CardSim, Cloud, LayoutDashboard, User } from "lucide-vue-next"
+</script>
 <template>
   <div class="sidebar">
 
@@ -8,27 +11,25 @@
     <nav class="menu">
 
       <router-link to="/dashboard" class="menu-item">
-        <span class="icon">📊</span>
+        <layout-dashboard class="icon"/>
         Dashboard
       </router-link>
 
-      <router-link to="/alunos" class="menu-item">
-        <span class="icon">👨‍🎓</span>
+      <router-link to="/adicionarAlunos" class="menu-item">
+        <user class="icon"/>
         Alunos
       </router-link>
 
       <router-link to="/feedbacks" class="menu-item">
-        <span class="icon">💬</span>
+        <cloud class="icon"/>
         Feedbacks
       </router-link>
 
       <router-link to="/atividades" class="menu-item">
-        <span class="icon">📚</span>
+        <card-sim class="icon"/>
         Atividades
       </router-link>
-
     </nav>
-
   </div>
 </template>
 

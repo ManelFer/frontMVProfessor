@@ -3,6 +3,7 @@ import { createRouter, createWebHistory} from "vue-router"
 import Login from "../pages/Login.vue"
 import Register from "../pages/Register.vue"
 import DashBoard from "../pages/DashBoard.vue"
+import AdicionarAlunos from "../pages/AdicionarAlunos.vue"
 
 
 const routes = [
@@ -21,6 +22,10 @@ const routes = [
     {
         path: '/dashboard',
         component: DashBoard
+    },
+    {
+        path: '/adicionarAlunos',
+        component: AdicionarAlunos 
     }
 ]
 

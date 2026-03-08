@@ -1,32 +1,77 @@
 <script setup lang="ts">
-import SideBar from '../components/sideBar.vue';
-import NavBar from '../components/navBar.vue';
+import SideBar from '../components/sideBar.vue'
+import cardMaior from '../components/cardMaior.vue';
 
+
+import { Calendar, Users, BookOpen } from "lucide-vue-next"
 </script>
 
 <template>
     <div class="layout">
-        <SideBar/>
+        <SideBar />
+
         <div class="main">
-            <NavBar/>
-            <div class="cards">
-                <div class="card">
-                    <h3>Hoje</h3>
-                    <p>40</p>
-                </div>
+            
 
-                <div class="card">
-                    <h3>Alunos</h3>
-                    <p>2</p>
-                </div>
+            <div class="content">
+                <cardMaior 
+                    nome="Manoel"
+                    :aulas="3"
+                    :tarefas="12"
+                />
+                <div class="cards">
 
-                <div class="card">
-                    <h3>Atividades postadas</h3>
-                    <p>3</p>
+                    <!-- CARD HOJE -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span>Hoje</span>
+                            <Calendar class="icon" />
+                        </div>
+
+                        <div class="card-value">
+                            12 Out
+                        </div>
+
+                        <div class="card-info">
+                            ~ 3 aulas pendentes
+                        </div>
+                    </div>
+
+                    <!-- CARD ALUNOS -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span>Alunos</span>
+                            <Users class="icon" />
+                        </div>
+
+                        <div class="card-value">
+                            24
+                        </div>
+
+                        <div class="card-info">
+                            Cadastrar alunos
+                        </div>
+                    </div>
+
+                    <!-- CARD ATIVIDADES -->
+                    <div class="card">
+                        <div class="card-header">
+                            <span>Atividades</span>
+                            <BookOpen class="icon" />
+                        </div>
+
+                        <div class="card-value">
+                            8
+                        </div>
+
+                        <div class="card-info">
+                            atividades postadas
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </template>
-
 <style scoped src="../style/dashboard.css"></style>
