@@ -89,7 +89,7 @@
 }
 
 .menu-item:hover .icon {
-  color: #ff5a1f;
+  color: #6366f1;
 }
 
 
@@ -99,10 +99,10 @@
 
 .router-link-active {
   background: #fff3ed;
-  color: #ff5a1f;
+  color: #6366f1;
   font-weight: 600;
 }
 
 .router-link-active .icon {
-  color: #ff5a1f;
+  color: #6366f1;
 }
