@@ -4,7 +4,6 @@
 
 .sidebar {
   width: 260px;
-  height: 100vh;
 
   background: #ffffff;
   border-right: 1px solid #f0f0f0;
@@ -30,6 +29,7 @@
   padding-left: 10px;
   color: #111827;
   letter-spacing: -0.5px;
+  text-align: center;
 }
 
 
@@ -84,12 +84,12 @@
 /* ============================= */
 
 .menu-item:hover {
-  background: #f5f7fa;
-  color: #111827;
+  background: #D9C8B4;
+  color: #593E1C;
 }
 
 .menu-item:hover .icon {
-  color: #6366f1;
+  color: #593E1C;
 }
 
 
@@ -98,11 +98,12 @@
 /* ============================= */
 
 .router-link-active {
-  background: #fff3ed;
-  color: #6366f1;
+  background: #d8c8b5;
+  box-shadow: 2px 2px rgba(89,62,28,0.9);
+  color: #593E1C;
   font-weight: 600;
 }
 
 .router-link-active .icon {
-  color: #6366f1;
+  color: #593E1C;
 }

@@ -49,7 +49,7 @@ import { Calendar, Users, BookOpen } from "lucide-vue-next"
                         </div>
 
                         <div class="card-info">
-                            Cadastrar alunos
+                            Alunos Cadastrados
                         </div>
                     </div>
 
