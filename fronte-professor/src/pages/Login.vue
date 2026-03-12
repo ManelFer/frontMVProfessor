@@ -1,14 +1,30 @@
 <script setup lang="ts">
 import { ref } from "vue"
 import { useRouter } from "vue-router"
+import { api } from '../services/api'
 
 const email = ref("")
 const senha = ref("")
 const router = useRouter()
 
-function login() {
-  router.push("/dashboard")
-  console.log(email.value, senha.value)
+async function login() {
+  try {
+    const response = await api.post('/auth/login', {
+      email: email.value,
+      password: senha.value,
+    })
+
+    console.log('login bem sucedido', response.data)
+    localStorage.setItem('token', response.data.token)
+
+    router.push('/dashboard')
+  } catch (error: any) {
+    console.error('erro no login', error)
+    alert(
+      error?.response?.data?.error ||
+        'Falha ao efetuar login. Verifique suas credenciais.'
+    )
+  }
 }
 </script>
 

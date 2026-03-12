@@ -1,29 +1,41 @@
 <script setup lang="ts">
 import { ref } from "vue"
+import { useRouter } from 'vue-router'
+import { api } from '../services/api'
 
 const nome = ref("")
 const email = ref("")
-const telefone = ref("")
+//const telefone = ref("")
 const senha = ref("")
 const confirmarSenha = ref("")
 
-function registrar() {
+const router = useRouter()
 
-  if(senha.value !== confirmarSenha.value){
+async function registrar() {
+
+  if (senha.value !== confirmarSenha.value) {
     alert("As senhas não coincidem")
     return
   }
 
   const dados = {
-    nome: nome.value,
+    name: nome.value,
     email: email.value,
-    telefone: telefone.value,
-    senha: senha.value
+    password: senha.value
   }
 
-  console.log(dados)
-
-  // depois vamos enviar para API
+  try {
+    const response = await api.post('/auth/register', dados)
+    console.log('cadastro realizado', response.data)
+    // redireciona para login após cadastro bem‑sucedido
+    router.push('/login')
+  } catch (error: any) {
+    console.error('erro no cadastro', error)
+    alert(
+      error?.response?.data?.message ||
+        'Falha ao tentar cadastrar. Verifique os dados e tente novamente.'
+    )
+  }
 }
 </script>
 
@@ -63,14 +75,7 @@ function registrar() {
           />
         </div>
 
-        <div class="input-group">
-          <label>Telefone</label>
-          <input
-            type="tel"
-            v-model="telefone"
-            placeholder="(00) 00000-0000"
-          />
-        </div>
+        <!-- campo telefone removido, não enviado ao backend -->
 
         <div class="input-group">
           <label>Senha</label>
@@ -78,6 +83,16 @@ function registrar() {
             type="password"
             v-model="senha"
             placeholder="Digite uma senha"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Repetir Senha</label>
+          <input
+            type="password"
+            v-model="confirmarSenha"
+            placeholder="Repita a senha"
             required
           />
         </div>
