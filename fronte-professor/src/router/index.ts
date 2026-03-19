@@ -5,6 +5,7 @@ import Register from "../pages/Register.vue"
 import DashBoard from "../pages/DashBoard.vue"
 import AdicionarAlunos from "../pages/AdicionarAlunos.vue"
 import AdicionarAtividade from "../pages/AdicionarAtividade.vue"
+import Feadback from "../pages/Feadback.vue"
 
 
 const routes = [
@@ -31,6 +32,10 @@ const routes = [
     {
         path: '/adicionarAtividades',
         component: AdicionarAtividade
+    },
+    {
+        path: '/feadback',
+        component: Feadback
     }
 ]
 

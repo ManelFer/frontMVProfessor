@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
 import SideBar from "../components/sideBar.vue"
-
-
-import { Search, Plus,  User, Trash2 } from "lucide-vue-next"
-
+import { Search, Plus, User, Trash2 } from "lucide-vue-next"
+import AddAlunoModal from "../components/AddAlunoModal.vue";
+import { ref } from "vue";
+const openModal = ref(false)
 </script>
 
 <template>
@@ -35,7 +35,7 @@ import { Search, Plus,  User, Trash2 } from "lucide-vue-next"
 
                         </div>
 
-                        <button class="btn-add">
+                        <button class="btn-add" @click="openModal = true">
                             <Plus class="icon" />
                             Adicionar Aluno
                         </button>
@@ -80,7 +80,7 @@ import { Search, Plus,  User, Trash2 } from "lucide-vue-next"
                                     <span class="badge">Verbo to-be</span>
                                 </td>
                                 <td class="actions">
-                                        <Trash2 class="icon"/>
+                                    <Trash2 class="icon" />
                                 </td>
 
                             </tr>
@@ -146,6 +146,11 @@ import { Search, Plus,  User, Trash2 } from "lucide-vue-next"
         </div>
 
     </div>
+    <AddAlunoModal
+        v-if="openModal"
+        @close="openModal = false"
+        @save="(aluno)=>console.log(aluno)" 
+    />
 
 </template>
 <style scoped src="../style/adicionarAlunos.css"></style>

@@ -20,7 +20,7 @@ import { CardSim, Cloud, LayoutDashboard, User } from "lucide-vue-next"
         Alunos
       </router-link>
 
-      <router-link to="/feedbacks" class="menu-item">
+      <router-link to="/feadback" class="menu-item">
         <cloud class="icon"/>
         Feedbacks
       </router-link>
