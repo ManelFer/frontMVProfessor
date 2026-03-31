@@ -54,7 +54,6 @@ const openModal = ref(false)
                         <thead>
                             <tr>
                                 <th>Nome</th>
-                                <th>Assunto</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
@@ -74,10 +73,6 @@ const openModal = ref(false)
                                         <p>ana.beatriz@email.com</p>
                                     </div>
 
-                                </td>
-
-                                <td>
-                                    <span class="badge">Verbo to-be</span>
                                 </td>
                                 <td class="actions">
                                     <Trash2 class="icon" />
@@ -100,10 +95,6 @@ const openModal = ref(false)
                                     </div>
 
                                 </td>
-
-                                <td>
-                                    <span class="badge"> Present perfect </span>
-                                </td>
                                 <td class="actions">
                                     <Trash2 class="icon" />
                                 </td>
@@ -124,10 +115,6 @@ const openModal = ref(false)
                                         <p>mariana.c@email.com</p>
                                     </div>
 
-                                </td>
-
-                                <td>
-                                    <span class="badge"> Simple Present </span>
                                 </td>
                                 <td class="actions">
                                     <Trash2 class="icon" />
